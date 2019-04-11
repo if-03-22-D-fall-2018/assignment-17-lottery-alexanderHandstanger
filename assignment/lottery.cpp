@@ -13,18 +13,24 @@
 #include <stdio.h>
 #include "lottery.h"
 
-bool init_lottery(const char *csv_file, char csv_separator){
-  FILE* stream = fopen(csv_file, "r");
+static FILE* stream;
+static char separator;
 
-  return false;
+bool init_lottery(const char *csv_file, char csv_separator){
+  stream = fopen(csv_file, "r");
+  if(stream == 0){
+    return false;
+  }
+  separator = csv_separator;
+  return true;
 }
 
 bool get_tip(int tip_number, int tip[TIP_SIZE]){
-  return false;
+  return 0;
 }
 
 bool set_drawing(int drawing_numbers[TIP_SIZE]){
-  return false;
+  return 0;
 }
 
 int get_tip_result(int tip_number){
