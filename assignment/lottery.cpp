@@ -26,6 +26,7 @@ bool init_lottery(const char *csv_file, char csv_separator){
 }
 
 bool get_tip(int tip_number, int tip[TIP_SIZE]){
+  fseek(stream, 36, SEEK_SET); //Go over the useless thing at the start 
   return 0;
 }
 
