@@ -26,8 +26,11 @@ bool init_lottery(const char *csv_file, char csv_separator){
 }
 
 bool get_tip(int tip_number, int tip[TIP_SIZE]){
-  fseek(stream, 36, SEEK_SET); //Go over the useless thing at the start 
-  return 0;
+  char ch[56];
+  for (int i = 0; i < tip_number; i++) {
+    char[] buffer = fgets(ch, 56, stream);
+  }
+  
 }
 
 bool set_drawing(int drawing_numbers[TIP_SIZE]){
